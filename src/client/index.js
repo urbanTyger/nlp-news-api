@@ -1,7 +1,7 @@
 import { checkInput } from './js/nameChecker';
 import { handleSubmit } from './js/formHandler';
 
-// Main scss stylesheet
+// main scss stylesheet
 import './styles/main.scss';
 
 // Service Worker 

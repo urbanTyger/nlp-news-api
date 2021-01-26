@@ -18,6 +18,7 @@ app.use(bodyParser.json())
 
 console.log(__dirname)
 
+// meaningCloud API link - server side only
 const API_Url = 'https://api.meaningcloud.com/sentiment-2.1?key=';
 
 
