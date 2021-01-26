@@ -1,0 +1,42 @@
+form {
+    border: 1px solid #54545463;
+    border-radius: 3px;
+    padding: 40px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.363);
+}
+
+input {
+    padding: 5px 20px;
+    width: 100%;
+    line-height: 20px;
+    margin: 10px 0;
+    outline: none;
+    border: 2px solid gray;
+    transition:
+        background-color 300ms ease,
+        border 100ms ease-out;
+    box-sizing: border-box;
+
+
+    &:focus {
+        box-sizing: border-box;
+        background-color: rgba(173, 216, 230, 0.342);
+        border: 2px solid blue;
+    }
+}
+
+#submit {
+    background-color: $btn-color;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 300ms ease;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: darken($btn-color, 25%);
+        color: white;
+
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="shortcut icon" href="./mic.svg" type="image/x-icon">
+    <meta charset="utf-8">
+    <title>Test</title>
+
+</head>
+
+<body>
+
+    <header class="top">
+        <div class="logo">
+            <img src='sun.svg' alt="logo should be here">
+        </div>
+        <div class="">
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+                <input id="name" type="search" name="input" value="" placeholder="Enter text or a URL to analyze">
+                <input id='submit' type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
+                    onsubmit="return Client.handleSubmit(event)">
+            </form>
+        </section>
+
+        <section>
+            <h1><strong>Results:</strong></h1>
+            <div class="result-container">
+                <label for="score-tag">Score:</label>
+                <div id="score-tag"></div>
+                <label for="agreement">Agreement:</label>
+                <div id="agreement"></div>
+                <label for="subjectivity">Subjectivity:</label>
+                <div id="subjectivity"></div>
+                <label for="confidence">Confidence:</label>
+                <div id="confidence">
+                    <span class="bar"></span>
+                </div>
+                <label for="irony">Irony:</label>
+                <div id="irony"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy Thomas Miller @Udacity</p>
+        <p>API Usage from MeaningCloud</p>
+    </footer>
+</body>
+
+</html>
