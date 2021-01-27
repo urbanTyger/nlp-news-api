@@ -4,7 +4,7 @@
   "description": "",
   "main": "./src/client/index.js",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest",
     "start": "node src/server/index.js --watch -open",
     "build-prod": "webpack --config webpack.prod.js",
     "build-http": "http-server dist",

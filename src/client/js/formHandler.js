@@ -25,7 +25,7 @@ function handleSubmit(event) {
     } else {
         inputField.focus()
         inputField.style.borderColor = "red";
-        alert("Please enter text or a URL. No emails please and a word longer than 5 charaters.");
+        alert("Please enter text or a URL. No emails please and a word longer than 5 characters.");
         return;
     }
     sendData(sendToApi);
@@ -109,4 +109,4 @@ function clearFields() {
     irony.innerHTML = '';
 }
 
-export { handleSubmit, sendData }
+export { handleSubmit, sendData, clearFields, fillResults }
