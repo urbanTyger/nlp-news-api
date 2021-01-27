@@ -44,7 +44,7 @@ module.exports = {
             filename: "./index.html?[hash]",
             title: "Progressive Web Application",
         }),
-        new FaviconsWebpackPlugin('src/client/views/mic.svg'),
+        new FaviconsWebpackPlugin('./src/client/views/mic.svg'),
 
 
     ]
