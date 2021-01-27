@@ -53,10 +53,18 @@ function sendData(sendToApi) {
                 fillResults(message);
             }
         })
-        .catch(err => alert(`There was a problem: 
+        .catch(err => {
+            if (!err.body) {
+                alert("Connection Refused");
+            } else {
+                alert(`There was a problem: 
             Error Code: ${err.status.code}. 
             Message: ${err.status.msg}.
-            - Please check your link -`));
+            - Please check your link -`)
+            }
+            return;
+
+        });
 
 }
 
