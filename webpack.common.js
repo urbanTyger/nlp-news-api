@@ -41,7 +41,7 @@ module.exports = {
     plugins: [
         new HtmlWebPackPlugin({
             template: "./src/client/views/index.html",
-            filename: "./index.html?[hash]",
+            filename: "./index.html",
             title: "Progressive Web Application",
         }),
         new FaviconsWebpackPlugin('./src/client/views/mic.svg'),
