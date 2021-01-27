@@ -33,11 +33,8 @@ function handleSubmit(event) {
 
 function sendData(sendToApi) {
     // send checked link/text to internal server
-    let address = "http://127.0.0.1:5000";
-    if (process.env.PORT) {
-        address = "";
-    }
-    fetch(`${address}/sentient`, {
+
+    fetch(`/sentient`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
