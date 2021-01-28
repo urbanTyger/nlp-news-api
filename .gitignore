@@ -4,3 +4,5 @@ package-lock*
 dist/
 coverage/
 .vscode/
+# Local Netlify folder
+.netlify

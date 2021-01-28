@@ -1,0 +1,9 @@
+[build]
+  functions = "functions"
+  publish = "dist"
+
+[[redirects]]
+  from = "/sentient"
+  to = "/.netlify/functions/sentient/"
+  status = 201
+  force = true

@@ -8,6 +8,7 @@ const inputField = document.getElementById('name');
 function handleSubmit(event) {
     event.preventDefault()
     clearFields()
+    console.log("starting...");
     // check what text was put into the form field
     let formText = inputField.value;
     const sendToApi =
@@ -33,11 +34,8 @@ function handleSubmit(event) {
 
 function sendData(sendToApi) {
     // send checked link/text to internal server
-    let address = "http://127.0.0.1:5000";
-    if (process.env.PORT) {
-        address = "";
-    }
-    fetch(`${address}/sentient`, {
+    console.log("send.....");
+    fetch('/sentient', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -47,6 +45,7 @@ function sendData(sendToApi) {
     })
         .then(res => res.json())
         .then(message => {
+            console.log("new message", message)
             if (message.status.msg != "OK") {
                 throw message;
             } else {
@@ -54,13 +53,17 @@ function sendData(sendToApi) {
             }
         })
         .catch(err => {
-            if (!err.body) {
-                alert("Connection Refused");
+            if (!err.status.code || !err.status.msg) {
+                alert("There seems to have been a connection problem...");
+                console.log(err);
             } else {
                 alert(`There was a problem: 
-            Error Code: ${err.status.code}. 
-            Message: ${err.status.msg}.
-            - Please check your link -`)
+        Error Code: ${err.status.code}. 
+        Message: ${err.status.msg}.
+        
+        - Please check your link -
+        
+        Cost: ${err.status.credits} Credit(s)`)
             }
             return;
 
