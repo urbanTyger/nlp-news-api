@@ -93,7 +93,7 @@ function fillResults(message) {
         if (i > 33 && i < 66) {
             bar.style.backgroundColor = "yellow";
         } else if (i >= 66 && i < 80) {
-            bar.style.backgroundColor = "blue";
+            bar.style.backgroundColor = "lightblue";
         } else if (i >= 80) {
             bar.style.backgroundColor = "rgb(119, 233, 26)";
         }
