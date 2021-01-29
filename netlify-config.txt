@@ -1,0 +1,26 @@
+There are two ways I was able to find. One I did not get to work (serverless-http module) but the second you can see better explained in the video link below. You pretty much make your app.post function into one netlify can use.
+
+Firstly though, I created a new branch on github to make the changes. I then pulled down the branch and worked from there.
+
+In your function call to the js server( '/endpoint', ...) you need to set up a netlify.toml file (in your root) for a functions folder, and a redirect from your endpoint to that folder. ('endpoint' is whatever you called it in your function)
+
+netlify.toml
+
+
+From there, you create a functions folder in your root directory, and add "endpoint/endpoint.js" to it.
+
+Inside the same folder of the endpoint.js file, you install the dependencies and require them inside the endpoint.js file.
+
+
+
+
+Inside your endpoint.js, convert your app.post to an exports.handler function like below. This time, instead of request.body, you need to get the event.body from the client. The response is sent via the callback.
+
+endpoint/endpoint.js
+
+
+You can test this all out with a netlify cli etc locally and push it up to github->netlify when working.
+
+Good luck and let me know how it goes!
+
+https://www.youtube.com/watch?v=a1AphvrtynU
